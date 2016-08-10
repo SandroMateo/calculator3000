@@ -3,7 +3,7 @@
 <head>
   <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
   <link href="css/styles.css" rel="stylesheet" type="text/css">
-  <script type="js/jquery-3.1.0.js"></script>
+  <script src="js/jquery-3.1.0.js"></script>
   <script src="js/scripts.js"></script>
   <title>Calculator</title>
 </head>
@@ -13,15 +13,21 @@
     <div id="blanks">
       <form>
         <div class="form-group">
-          <label for="add1">1st number:</label>
-          <input id="add1" class="form-control" type="text">
+          <label for="num1">1st number:</label>
+          <input id="num1" class="form-control" type="text">
         </div>
         <div class="form-group">
-          <label for="add2">2nd number:</label>
-          <input id="add2" class="form-control" type="text">
+          <label for="num2">2nd number:</label>
+          <input id="num2" class="form-control" type="text">
         </div>
         <button type="submit" class="btn btn-success">Add!</button>
+        <button type="submit" class="btn btn-warning">Subtract!</button>
+        <button type="submit" class="btn btn-primary">Multiply!</button>
+        <button type="submit" class="btn btn-danger">Divide!</button>
       </form>
+    </div>
+    <div id="display">
+      <ul id="output"></ul>
     </div>
   </div>
 </body>
