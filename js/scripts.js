@@ -28,8 +28,3 @@ var converterG2L = function(gallons) {
 var converterL2G = function(liters) {
 	return liters / 3.78541;
 };
-var num1 = parseInt(prompt("Enter a number: "));
-var num2 = parseInt(prompt("Enter another number: "));
-
-var result = add(num1,num2);
-alert(result);
