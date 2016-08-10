@@ -36,6 +36,7 @@ $(function() {
 		var number2 = parseInt($("#num2").val());
 		var output = add(number1,number2);
 		$("#calculator-output").text(output);
+		$("#calculator-output").show();
 		event.preventDefault();
 	});
 	$(".btn-warning").click(function(event) {
@@ -43,6 +44,7 @@ $(function() {
 		var number2 = parseInt($("#num2").val());
 		var output = subtract(number1,number2);
 		$("#calculator-output").text(output);
+		$("#calculator-output").show();
 		event.preventDefault();
 	});
 	$(".btn-primary").click(function(event) {
@@ -50,6 +52,7 @@ $(function() {
 		var number2 = parseInt($("#num2").val());
 		var output = multiply(number1,number2);
 		$("#calculator-output").text(output);
+		$("#calculator-output").show();
 		event.preventDefault();
 	});
 	$(".btn-danger").click(function(event) {
@@ -57,13 +60,18 @@ $(function() {
 		var number2 = parseInt($("#num2").val());
 		var output = divide(number1,number2);
 		var modulo = remainder(number1, number2);
-		$("#calculator-output").text(Math.floor(output) + " r" + modulo);
+		if (modulo > 0) {
+			$("#calculator-output").text(Math.floor(output) + " r" + modulo);
+		} else {
+			$("#calculator-output").text(Math.floor(output));
+		}
+		$("#calculator-output").show();
 		event.preventDefault();
 	});
 	// converter functions
 	$("#converter-btn").click(function(event) {
     var quantity = parseInt($("#input1").val());
-    var unit = $("#input2").val();
+    var unit = $("input:checked").val();
     var output = 0;
     if(unit === "gal") {
       output = converterG2L(quantity);
@@ -79,6 +87,7 @@ $(function() {
       unit = "C";
     }
     $("#converter-output").text(output.toFixed(4) + " " + unit);
+		$("#converter-output").show();
     event.preventDefault();
   });
 });

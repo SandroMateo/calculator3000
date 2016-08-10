@@ -9,41 +9,62 @@
 </head>
 <body>
   <div class="container">
+    <h1>Calculator</h1>
     <div class="row">
-      <h1>Calculator</h1>
-      <div id="calculator-blanks">
+      <div class="col" id="calculator-blanks">
         <form>
           <div class="form-group">
-            <input id="num1" class="form-control" type="text" placeholder="Enter a number">
+            <input id="num1" class="form-control" type="text" placeholder="Enter a number!">
           </div>
           <div class="form-group">
-            <input id="num2" class="form-control" type="text" placeholder="Enter another number">
+            <input id="num2" class="form-control" type="text" placeholder="Enter another number!">
           </div>
-          <button type="submit" id="add-btn" class="btn btn-success">Add!</button>
-          <button type="submit" class="btn btn-warning">Subtract!</button>
-          <button type="submit" class="btn btn-primary">Multiply!</button>
-          <button type="submit" class="btn btn-danger">Divide!</button>
         </form>
-      </div>
-      <div id="calculator-display">
-        <p id="calculator-output"></p>
       </div>
     </div>
     <div class="row">
-      <h2>Convert Some Units Bud!</h2>
+      <div class="col">
+        <p><span id="calculator-output"></span></p>
+      </div>
+    </div>
+    <br><div class="row">
+      <div class="col">
+        <button type="submit" id="add-btn" class="btn btn-success">Add!</button>
+        <button type="submit" class="btn btn-warning">Subtract!</button>
+        <button type="submit" class="btn btn-primary">Multiply!</button>
+        <button type="submit" class="btn btn-danger">Divide!</button>
+      </div>
+    </div>
+    <h2>Convert Some Units Bud!</h2>
+    <div class="row">
       <div id="converter-blanks">
         <form>
-          <div class="form-group">
+          <div class="form-group col">
             <input id="input1" type="text" class="form-control" placeholder="Enter a quantity!">
+            <label>
+              <input name="unit" type="radio" value="gal">
+                Gallons!
+            </label>
+            <label>
+              <input name="unit" type="radio" value="L">
+                Liters!
+            </label>
+            <label>
+              <input name="unit" type="radio" value="C">
+                Celsius!
+            </label>
+            <label>
+              <input name="unit" type="radio" value="F">
+                Fahrenheit!
+            </label>
+            <div class="result-right">
+              <div id="converter-display">
+                <p><span id="converter-output"></span></p>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-success" id="converter-btn">Convert!</button>
           </div>
-          <div class="form-group">
-            <input class="form-control" type="text" id="input2" placeholder="Enter its units (gal, L, C, F)!">
-          </div>
-          <button type="submit" class="btn btn-success" id="converter-btn">Convert!</button>
         </form>
-      </div>
-      <div id="converter-display">
-        <p id="converter-output"></p>
       </div>
     </div>
   </div>
