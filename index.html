@@ -9,25 +9,42 @@
 </head>
 <body>
   <div class="container">
-    <h1>Calculator</h1>
-    <div id="blanks">
-      <form>
-        <div class="form-group">
-          <label for="num1">1st number:</label>
-          <input id="num1" class="form-control" type="text">
-        </div>
-        <div class="form-group">
-          <label for="num2">2nd number:</label>
-          <input id="num2" class="form-control" type="text">
-        </div>
-        <button type="submit" class="btn btn-success">Add!</button>
-        <button type="submit" class="btn btn-warning">Subtract!</button>
-        <button type="submit" class="btn btn-primary">Multiply!</button>
-        <button type="submit" class="btn btn-danger">Divide!</button>
-      </form>
+    <div class="row">
+      <h1>Calculator</h1>
+      <div id="calculator-blanks">
+        <form>
+          <div class="form-group">
+            <input id="num1" class="form-control" type="text" placeholder="Enter a number">
+          </div>
+          <div class="form-group">
+            <input id="num2" class="form-control" type="text" placeholder="Enter another number">
+          </div>
+          <button type="submit" id="add-btn" class="btn btn-success">Add!</button>
+          <button type="submit" class="btn btn-warning">Subtract!</button>
+          <button type="submit" class="btn btn-primary">Multiply!</button>
+          <button type="submit" class="btn btn-danger">Divide!</button>
+        </form>
+      </div>
+      <div id="calculator-display">
+        <p id="calculator-output"></p>
+      </div>
     </div>
-    <div id="display">
-      <ul id="output"></ul>
+    <div class="row">
+      <h2>Convert Some Units Bud!</h2>
+      <div id="converter-blanks">
+        <form>
+          <div class="form-group">
+            <input id="input1" type="text" class="form-control" placeholder="Enter a quantity!">
+          </div>
+          <div class="form-group">
+            <input class="form-control" type="text" id="input2" placeholder="Enter its units (gal, L, C, F)!">
+          </div>
+          <button type="submit" class="btn btn-success" id="converter-btn">Convert!</button>
+        </form>
+      </div>
+      <div id="converter-display">
+        <p id="converter-output"></p>
+      </div>
     </div>
   </div>
 </body>
