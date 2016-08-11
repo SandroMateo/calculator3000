@@ -2,14 +2,18 @@ label {
   margin: 1em 0.25em 1em 0.25em;
 }
 
-span {
+/*span {
   display: none;
   float: right;
   border: 1px solid grey;
   padding: 0.1em;
   text-align: center;
-}
+}*/
 
 .col {
   width: 25em;
+}
+
+.answer {
+  float: right;
 }
